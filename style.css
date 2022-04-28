@@ -1,9 +1,386 @@
 body{
-    margin: 0%;
+
+    width: 100%;
+   
+    padding: 0;
+    margin: 0;
+    font-family: DD-TTNorms, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+body_flex{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+}
+a{
+    color: aliceblue;
+}
+.wrapper{
+    width: 100%;
+    display:block;
+    background-image: url("https://img.cdn4dd.com/cdn-cgi/image/fit=cover,format=auto,quality=60/https://cdn.doordash.com/media/consumer/home/landing/new/hero_landing_us_mobile.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height:450px;
+    position: relative;
+    text-align: center;
+}
+.nav{
+    float: right;
+    display: flex;
+}
+.nav span a{
+    font-size:17px ;
+    padding: 7px 5px 7px 0;
+    font-weight: 700;
+    color: rgb(243, 239, 239);
+    display: block;
+    margin: 15px 20px 0 0;
+    line-height: 22px;
+    text-decoration: none;
     
 }
-.banner{
-    background-color: rgb(247, 247, 247);
-    height: 420px;
-    width:100vmin;
+.sign_up span a{
+    padding: 7px 15px 7px 10px;
+    background-color: rgb(252, 254, 255);
+    color:rgb(54, 53, 53); 
+    border-radius: 70px;
+    padding-left:20px ;
+    text-decoration: none;
+
+}
+
+.logo{
+    
+    width: 60px;
+    height: 40px;
+    fill: #ffffff; 
+    display: flex;
+    flex-wrap: wrap;
+    display: block;
+    
+}
+.inside_banner{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    top:122px;
+}
+.container_info{
+
+    padding-right: 20px;
+}
+.info_banner{
+
+    font-size: 32px;
+    width: 100%;
+    display: block;
+    font-weight: 700;
+    line-height: 40px;
+    color: #ffffff;
+    letter-spacing: -0.04ch;
+}
+.search_bar_icon{
+    width: 24px;
+    height: 24px;
+    fill: none;
+    padding: 10px 0 10px 10px;
+
+}
+.serB_arrow{
+    width: 24px;
+    height: 24px;
+    fill: none;
+    padding: 10px 10px 10px 0;
+}
+.delivery_serB{
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 500;
+    padding: 10px 1px 10px 10px;
+    border: none;
+    
+}
+.search_box{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: #ffffff;
+    border-radius: 20px;
+   
+
+}
+.search_bar{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+
+}
+.container_search_bar{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+.saved_address{
+   
+    padding-top: 26px;
+}
+.get{
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid rgb(231,231,231);
+    margin:30px 4px 3px 3px ;
+    height: 80px;
+}
+.get_exp,.get_app{
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 22px;
+    display: block;
+}
+.get_exp{
+    width: 165px;
+    padding-right: 40px;
+    padding-left: 20px;
+}
+.get_app{
+    width:99px;
+    background-color:rgb(235, 23, 0) ;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px 10px 10px 10px;
+    border-radius: 20px;
+    
+}
+.main{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.dasher_icon img,.partner_icon img,.try_app_icon img{
+    width: 88px;
+    height: 88px;
+}
+
+.dasher_info h2,.partner_info h2,.try_app_info h2{
+    width: 174px;
+    font-size: 32px;
+    font-weight: 700;
+    text-align: left;
+    display: block;
+    color: rgb(25,25,25);
+    margin: 0;
+    padding-bottom: 5px;
+}
+.dasher_info h3,.partner_info h3 ,.try_app_info h3{
+    font-size: 18px;
+    font-weight: 400;
+    text-align: left;
+    margin: 0;
+    padding: 0;
+    color: rgb(25,25,25);
+    width: 220px;
+}
+.dasher,.partner,.try_app{
+    padding-top: 25px ;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.dasher_info a,.partner_info a,.try_app_info a{
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding-top: 5px;
+    gap:3px;
+
+}
+
+.dasher_info a p,.partner_info a p,.try_app_info a p{
+    font-size: 14px;
+    color:#EB1700;
+    font-weight: 700;
+    display: block;
+}
+.icon_info_about_Dasher{
+    padding-bottom: 123px;
+}
+.dinning_table1 img{
+    width: 80%;
+    float: right;
+}
+.dinning_table1{
+    margin-top:30px;
+    top:-150px;
+    position: absolute;
+}
+.dinning_table2 img{
+    margin-top: 50px;
+    width: 80%;
+    float:left;
+}
+.dinning_table1_container{
+    margin-top: 110px;
+}
+.dinning_table1_container,.dinning_table2_container{
+    padding: 20px 10px ;
+    display: flex;
+    flex-direction: column;
+    clear:both;
+    align-items: flex-start;
+
+    
+}
+.dinning_table1_title,.dinning_table2_title{
+    width: 300px;
+    font-size: 18px;
+    font-weight: 700;
+    color: rgb(2,25,25);
+
+}
+.dinning_table1_info,.dinning_table2_info{
+    width: 200px;
+    font-size:13px;
+}
+.get_the_app,.find_restaurants{
+    font-size: 14px;
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
+    color: #faf8f8;
+    text-decoration: none;
+}
+.container_gta,.container_fr{
+    padding: 5px 10px 5px 10px ;
+    background-color: #EB1700;
+    border-radius: 1000px;
+    text-align:center;
+    size: 20px;
+}
+.container_gta p,.container_fr p{
+    margin: 0;
+    padding: 0;
+}
+.footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(25,25,25);
+}
+.cities_cuisines{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+.top_cities,.top_cuisines,.get_know1,.let_us,.doing1{
+   text-align: center;
+   padding: 10px 20px;
+}
+.top_cities > .title_city,.top_cuisines > .title_cuisine{
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 22px;
+    color: #ffffff;
+}
+.get_know1 > .get1, .let_us > .us, .doing1 > .do_bu1{
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 22px;
+    color: #ffffff;
+}
+.cities p,.cuisines p{
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 15px;
+    opacity: 0.7;
+}
+.know p,.let p,.doing_business p {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 15px;
+    opacity: 0.7;
+}
+.cities,.cuisines,.know,.let,.doing_business{
+    text-decoration: none;
+    
+}
+.cities p:hover ,.cuisines p:hover{
+    text-decoration: underline;
+    opacity: 1;
+}
+.know p:hover ,.let p:hover ,.doing_business p:hover  {
+    text-decoration: underline;
+    opacity: 1;    
+
+}
+
+.play_store svg ,.google_play svg{
+    height :"48px"; 
+    width:"144px"; 
+    fill: #ffffff;
+    opacity: 0.7; 
+}
+.play_store ,.google_play{
+    padding:2px 8px;
+    border-radius: 8px;
+    background-color: rgb(73,73,73);
+    display: block;
+}
+.stores {
+    padding: 30px 0;
+}
+.button_app_store{
+    padding-bottom: 10px;
+}
+.play_store :hover,.google_play :hover{
+  opacity: 1;
+}
+.bottom_page{
+    padding:25px 0 ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.social_media{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap:15px;
+}
+.logos{
+    size: 0px;
+    opacity: 0.5;
+}
+.logos:hover{
+    opacity: 0.9;
+}
+.small_bottom{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 15px 0;
+}
+.tos,.pri,.nac,.dl,.cr{
+    font-size: 12px;
+    text-decoration: none;
+    padding: 0 10px;
+    color: #ffffff;
+}
+.small_bottom span{
+    opacity: 0.8;
+}
+.bg_dinning{
+    background-color: rgb(255,240,237);
+    width: 100%;
+    padding-bottom:50px ;
+    position: relative;
 }

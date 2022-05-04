@@ -1,3 +1,32 @@
+@font-face {
+    font-family: "DD-TTNorms";
+    src: url("./TTNorms-Regular.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "DD-TTNorms";
+    src: url("./TTNorms-Medium.woff2") format("woff2");
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "DD-TTNorms";
+    src: url("./TTNorms-Bold.woff2") format("woff2");
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "DD-TTNorms";
+    src: url("./TTNorms-ExtraBold.woff2") format("woff2");
+    font-weight: 900;
+    font-style: normal;
+}
+
+
 body{
 
     width: 100%;
@@ -10,12 +39,14 @@ body_flex{
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
+    justify-content: center;
 }
 a{
     color: aliceblue;
+    font-weight: 600;
 }
-.wrapper{
+.header{
     width: 100%;
     display:block;
     background-image: url("https://img.cdn4dd.com/cdn-cgi/image/fit=cover,format=auto,quality=60/https://cdn.doordash.com/media/consumer/home/landing/new/hero_landing_us_mobile.jpg");
@@ -31,7 +62,7 @@ a{
     display: flex;
 }
 .nav span a{
-    font-size:17px ;
+    font-size:18px ;
     padding: 7px 5px 7px 0;
     font-weight: 700;
     color: rgb(243, 239, 239);
@@ -60,6 +91,11 @@ a{
     flex-wrap: wrap;
     display: block;
     
+}
+.heading_t{
+    display: none;
+    color: #ffffff;
+    font-weight: 500;
 }
 .inside_banner{
     position: absolute;
@@ -90,11 +126,22 @@ a{
     padding: 10px 0 10px 10px;
 
 }
+.search_bar_icon2{
+    display: none;
+    width:24px;
+    height: 24px;
+    fill:none;
+    padding: 10px 0 10px 10px;
+}
+
 .serB_arrow{
     width: 24px;
     height: 24px;
     fill: none;
     padding: 10px 10px 10px 0;
+}
+.serB_arrow path{
+    fill :currentColor;
 }
 .delivery_serB{
     font-size: 16px;
@@ -109,9 +156,14 @@ a{
     align-items: center;
     flex-wrap: wrap;
     background-color: #ffffff;
-    border-radius: 20px;
+    border-radius: 65px;
    
 
+}
+.ienter{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 .search_bar{
     display: flex;
@@ -128,14 +180,19 @@ a{
 }
 .saved_address{
    
-    padding-top: 26px;
+    padding-top: 15px;
 }
-.get{
+.saved_address a{
+    font-weight: 500;
+}
+.Get_the_app{
     display: flex;
     align-items: center;
     border-bottom: 1px solid rgb(231,231,231);
-    margin:30px 4px 3px 3px ;
-    height: 80px;
+    margin:24px;
+    width:88%;
+    height: 78px;
+    gap:20px;
 }
 .get_exp,.get_app{
     font-size: 16px;
@@ -145,8 +202,6 @@ a{
 }
 .get_exp{
     width: 165px;
-    padding-right: 40px;
-    padding-left: 20px;
 }
 .get_app{
     width:99px;
@@ -161,14 +216,14 @@ a{
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    align-items: center;
+    align-items: flex-start;
 }
-.dasher_icon img,.partner_icon img,.try_app_icon img{
+.features_icon img{
     width: 88px;
     height: 88px;
 }
 
-.dasher_info h2,.partner_info h2,.try_app_info h2{
+.features_info h2{
     width: 174px;
     font-size: 32px;
     font-weight: 700;
@@ -178,16 +233,17 @@ a{
     margin: 0;
     padding-bottom: 5px;
 }
-.dasher_info h3,.partner_info h3 ,.try_app_info h3{
+.features_info h3{
+    font-family: DD-TTNorms, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     font-size: 18px;
     font-weight: 400;
     text-align: left;
     margin: 0;
     padding: 0;
     color: rgb(25,25,25);
-    width: 220px;
+    width: 164px;
 }
-.dasher,.partner,.try_app{
+.features{
     padding-top: 25px ;
     width: 100%;
     display: flex;
@@ -196,7 +252,7 @@ a{
     gap: 20px;
 }
 
-.dasher_info a,.partner_info a,.try_app_info a{
+.features_info a{
     display: flex;
     align-items: center;
     margin: 0;
@@ -205,14 +261,15 @@ a{
 
 }
 
-.dasher_info a p,.partner_info a p,.try_app_info a p{
+.features_info a p{
     font-size: 14px;
     color:#EB1700;
     font-weight: 700;
     display: block;
 }
-.icon_info_about_Dasher{
+.features_dasher{
     padding-bottom: 123px;
+    padding-left: 10px;
 }
 .dinning_table1 img{
     width: 80%;
@@ -232,7 +289,8 @@ a{
     margin-top: 110px;
 }
 .dinning_table1_container,.dinning_table2_container{
-    padding: 20px 10px ;
+    padding: 20px 20px;
+    width: 70%;
     display: flex;
     flex-direction: column;
     clear:both;
@@ -241,15 +299,25 @@ a{
     
 }
 .dinning_table1_title,.dinning_table2_title{
-    width: 300px;
+    width: 100%;
     font-size: 18px;
     font-weight: 700;
     color: rgb(2,25,25);
-
 }
 .dinning_table1_info,.dinning_table2_info{
     width: 200px;
-    font-size:13px;
+    font-size: 14px;
+    font-family: DD-TTNorms, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: 0ch;
+    text-transform: none;
+    color: rgb(25, 25, 25);
+    margin: 0px;
+    padding: 0px;
+    display: block;
+    font-variant-ligatures: no-common-ligatures;
+    padding: 15px 0;;
 }
 .get_the_app,.find_restaurants{
     font-size: 14px;
@@ -259,77 +327,70 @@ a{
     color: #faf8f8;
     text-decoration: none;
 }
-.container_gta,.container_fr{
+.container_button{
     padding: 5px 10px 5px 10px ;
     background-color: #EB1700;
     border-radius: 1000px;
     text-align:center;
     size: 20px;
 }
-.container_gta p,.container_fr p{
+.container_button p{
     margin: 0;
     padding: 0;
 }
 .footer{
+    
     display: flex;
     flex-direction: column;
     align-items: center;
     background-color: rgb(25,25,25);
 }
-.cities_cuisines{
+.All_Abouts{
     display: flex;
     flex-direction: row;
     align-items: flex-start;
 }
-.top_cities,.top_cuisines,.get_know1,.let_us,.doing1{
+.location,.about{
    text-align: center;
    padding: 10px 20px;
 }
-.top_cities > .title_city,.top_cuisines > .title_cuisine{
+.big_letters{
     font-size: 16px;
-    font-weight: 600;
-    line-height: 22px;
-    color: #ffffff;
-}
-.get_know1 > .get1, .let_us > .us, .doing1 > .do_bu1{
-    font-size: 16px;
-    font-weight: 600;
-    line-height: 22px;
-    color: #ffffff;
-}
-.cities p,.cuisines p{
-    font-size: 13px;
     font-weight: 500;
-    line-height: 15px;
-    opacity: 0.7;
+    line-height: 22px;
+    color: #ffffff;
 }
-.know p,.let p,.doing_business p {
+
+
+.smaller_letters p{
     font-size: 14px;
     font-weight: 500;
     line-height: 15px;
     opacity: 0.7;
+    margin: 0;
+    padding-bottom: 12px;
 }
-.cities,.cuisines,.know,.let,.doing_business{
-    text-decoration: none;
-    
+
+.smaller_letters{
+    text-decoration: none; 
 }
-.cities p:hover ,.cuisines p:hover{
+.smaller_letters p:hover{
     text-decoration: underline;
     opacity: 1;
 }
-.know p:hover ,.let p:hover ,.doing_business p:hover  {
-    text-decoration: underline;
-    opacity: 1;    
 
-}
-
-.play_store svg ,.google_play svg{
-    height :"48px"; 
-    width:"144px"; 
+.store_buttons svg{
+    height : 48px; 
+    width: 144px; 
     fill: #ffffff;
     opacity: 0.7; 
 }
-.play_store ,.google_play{
+.store_abouts{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.store_buttons{
     padding:2px 8px;
     border-radius: 8px;
     background-color: rgb(73,73,73);
@@ -369,7 +430,7 @@ a{
     justify-content: center;
     padding: 15px 0;
 }
-.tos,.pri,.nac,.dl,.cr{
+.bottom_terms{
     font-size: 12px;
     text-decoration: none;
     padding: 0 10px;
@@ -378,9 +439,456 @@ a{
 .small_bottom span{
     opacity: 0.8;
 }
-.bg_dinning{
-    background-color: rgb(255,240,237);
+.dinning_exp{
     width: 100%;
-    padding-bottom:50px ;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: rgb(255,240,237);
+    padding-bottom:100px ;
     position: relative;
+}
+
+@media screen and (min-width:375px ) {
+
+    .search_bar_icon2{
+        display: none;
+    }
+    .Get_the_app{
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid rgb(231,231,231);
+        margin:24px;
+        width:88%;
+        height: 78px;
+        gap:45px;
+    }
+    .dinning_table1_title,.dinning_table2_title{
+        width: 100%;
+        font-size: 24px;
+        font-weight: 700;
+        color: rgb(2,25,25);
+    }
+    .heading_t{
+        display: none;
+    }
+    
+}
+@media screen and (min-width:425px) {
+    .search_bar_icon2{
+        display: none;
+    }
+    .Get_the_app{
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid rgb(231,231,231);
+        margin:24px 56px;
+        width:311px;
+        height: 78px;
+        gap:27px;
+    }
+    .features_dasher{
+        padding-bottom: 123px;
+        padding-left: 36px;
+    }
+    .dinning_table1 img{
+        width: 85%;
+        float: right;
+    }
+
+    .dinning_table1_container, .dinning_table2_container {
+        padding: 50px 0 20px 20px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        clear: both;
+        align-items: flex-start;
+    }
+    .dinning_table2 img{
+        margin-top: 50px;
+        width: 85%;
+        float:left;
+    }
+    .dinning_table1_info,.dinning_table2_info{
+        width: 264px;
+        font-size: 14px;
+        font-family: DD-TTNorms, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+        font-weight: 500;
+        line-height: 20px;
+        letter-spacing: 0ch;
+        text-transform: none;
+        color: rgb(25, 25, 25);
+        margin: 0px;
+        padding: 0px;
+        display: block;
+        font-variant-ligatures: no-common-ligatures;
+        padding: 15px 0;;
+    }
+    .features_info h2{
+        width: 269px;
+        font-size: 32px;
+        font-weight: 700;
+        text-align: left;
+        display: block;
+        color: rgb(25,25,25);
+        margin: 0;
+        padding-bottom: 5px;
+    }
+    .features_info h3{
+        font-family: DD-TTNorms, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+        font-size: 18px;
+        font-weight: 400;
+        text-align: left;
+        margin: 0;
+        padding: 0;
+        color: rgb(25,25,25);
+        width: 220px;
+    }
+    .dinning_table1_title,.dinning_table2_title{
+        width: 100%;
+        font-size: 24px;
+        font-weight: 700;
+        color: rgb(2,25,25);
+    }
+    .heading_t{
+        display: none;
+    }
+}
+@media screen and (min-width:768px) {
+    .heading_t{
+        display: none;
+    }
+    .info_banner{
+        font-size: 32px;
+        width: 60%;
+        margin: auto;
+        padding: 31px;
+        display: block;
+        font-weight: 700;
+        line-height: 40px;
+        color: #ffffff;
+        letter-spacing: -0.04ch;
+    }
+    .Get_the_app{
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid rgb(231,231,231);
+        margin:24px 228px;
+        width:311px;
+        height: 78px;
+        gap:27px;
+    }
+    .features_dasher{
+        padding-bottom: 123px;
+        padding-left: 179px;
+    }
+    .dinning_table1 img{
+        width: 56%;
+        float: right;
+    }
+    .dinning_table2 img{
+        margin-top: 50px;
+        width: 56%;
+        float:left;
+        padding-top: 91px;
+    }
+    .dinning_table1{
+        margin-top:30px;
+        top:-283px;
+        position: absolute;
+    }
+    .features_dasher{
+        padding-bottom: 297px;
+        padding-left: 185px;
+    }
+    .dinning_table1_container{
+      position: absolute;
+      top: -418px;
+      width: 221px;
+    }
+    .dinning_table1_info{
+        width: 202px;
+    }
+    .dinning_table2_container{
+        position: absolute;
+        float: right;
+        right: 60px;
+        top: 135px;
+        padding:0;
+        width: 30%;
+    }
+    .dinning_table2_info{
+      width: 173px;
+    }
+    .dinning_table2_title{
+      width: 193px;
+    }
+    .dinning_exp{
+        padding-bottom: 140px;
+    }
+    .All_Abouts{
+        display:flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+    }
+    .location,.about{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .cc{
+        column-gap: 212px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        height: 233px;
+    }
+    .aa{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        column-gap: 120px;
+    }
+    .bottom_page{
+        padding: 25px 0;
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        column-gap: 84px;
+    }
+    .bottom_terms{
+        font-weight: 300;
+        padding: 3px 7px;
+    }
+    .logo_bottom{
+        padding: 1px 9px;
+    }
+
+    .search_bar_icon{
+        display: none;
+    }
+    .search_bar_icon2{
+        display: block;
+    }
+    .delivery_serB{
+        font-size: 16px;
+        line-height: 22px;
+        font-weight: 500;
+        padding: 10px 1px 10px 10px;
+        border: none;
+        width: 321px;
+        
+    }
+   
+}
+@media screen and (min-width:1024px){
+   .heading_t{
+       display: block;
+       letter-spacing: 3px;
+       font-weight: 700;
+       font-size: 18px;
+   }
+   .logo{
+       width: 35px;
+       height: 17px;
+   }
+   .logo_section{
+       display: flex;
+       flex-direction: row;
+       align-items: center;
+       gap:7px
+       
+   }
+   .inside_banner{
+       top:11px;
+   }
+   .ib{
+       padding-top: 20px;
+   }
+   .info_banner{
+       
+       width: 61%;
+       font-size: 45px;
+       line-height: 51px;
+   }
+   .Get_the_app{
+    margin: 24px 355px;
+   }
+   .features_dasher{
+       padding-left: 315px;
+       margin-bottom: 100px;
+   }
+   .dinning_table1 img {
+       width: 61%;
+       margin: -97px 0;
+   }
+   .dinning_table2 img{
+       width: 61%;
+       margin: 50px 0;
+   }
+   .dinning_table1_container{
+       left: 30px;
+   }
+   .dinning_table2_container{
+       right: -3px;
+       top: 275px;
+   }
+   .dinning_table2_title{
+       width: 284px;
+   }
+   .dinning_table2_info{
+       width:236px ;
+   }
+   .cc{
+       column-gap: 79px;
+   }
+   .All_Abouts{
+       display: flex;
+       flex-direction: row;
+   }
+   .location:last-child{
+       padding-left: 439px;
+
+   }
+   .aa{
+       column-gap: 14px;
+   }
+  
+   .bottom_page{
+       column-gap: 349px;
+       padding: 0;
+   }
+   .store_abouts{
+       display: flex;
+       flex-direction: row-reverse;
+       column-gap: 291px;
+       align-items: flex-start;
+   }
+  .store_buttons{
+      width: 114px;
+      height: 38px;
+  }
+  .store_buttons svg{
+      height: 36px;
+      width: 116px;
+  }
+  .stores{
+      padding: 30px 28px;
+  }
+
+
+}
+@media  screen and (min-width:1440px) {
+    .info_banner{
+        width: 60%;
+        font-size: 50px;
+    }
+    .arrow{
+        padding: 6px 8px 3px 7px;
+    }
+    .serB_arrow{
+        background-color: #EB1700;
+        width: 22px;
+        height: 24px;
+        border-radius: 35px;
+        padding: 5px 9px 8px 8px;
+    }
+    .serB_arrow path{
+        fill:#ffffff;
+    }
+    .header{
+        height: 460px;
+    }
+    .Get_the_app{
+        margin: 24px 584px;
+    }
+    .features_dasher{
+        column-gap: 219px;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        padding-left: 97px;
+        margin-bottom: 332px;
+    }
+    .features{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
+    .features_info{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .features_info h2 ,.features_info h3{
+        text-align: center;
+        width: 261px;
+    }
+    .features_icon img{
+        width: 149px;
+        height: 161px;
+    }
+    .dinning_exp{
+        width: 100%;
+    }
+    .dinning_table1 img{
+        width: 58%;
+        margin: -318px 107px;
+    }
+    .dinning_table1_title,.dinning_table2_title{
+        font-size: 33px;
+        width: 380px;
+    }
+    .dinning_table1_title{
+        width: 222px;
+    }
+    .dinning_table1_info,.dinning_table2_info{
+        width: 317px;
+    }
+    .dinning_table2 img{
+      width: 71%;
+      margin: 50px 97px;
+    }
+    .dinning_table1_container{
+        top:-576px;
+        width: 317px;
+        left: 80px;
+    }
+    .dinning_table2_container{
+        top:327px
+    }
+   .All_Abouts{
+       width: 1021px;
+   }
+  
+}
+@media  screen and (min-width:2560px) {
+    .Get_the_app{
+        margin: 24px 1131px;
+    }
+    .main{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    .dinning_table1 img{
+        width: 27%;
+        margin: -212px 589px;
+    }
+    .dinning_table1_container{
+        top:-459px;
+        left:794px;
+    }
+    .dinning_table2 img{
+        width: 27%;
+        margin: 71px 788px;
+    }
+    .dinning_table2_container{
+        right: 188px;
+    }
+
 }
